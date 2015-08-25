@@ -18,4 +18,6 @@ group :misc do
   # Add your extra gems here
   # gem 'susy', require: 'susy'
   # gem 'redcarpet', require: 'redcarpet'
+  gem 'bourbon', require: 'bourbon'
+  gem 'bitters', require: 'bitters'
 end
