@@ -3,11 +3,11 @@ class Bourbon < Locomotive::Wagon::Generators::Site::Base
     File.join(File.dirname(__FILE__))
   end
 
-  # Don't copy .git directory when site template is used via 'wagon init'
+  # Override super so we can exclude certain files/dirs in new wagon site
   def copy_sources
     directory('.', self.destination, {
       recursive:        true,
-      exclude_pattern:  /\.git\//,
+      exclude_pattern:  /\.git\/|bourbon\.rb/,  # Don't copy .git dir or this file
       name:             self.name,
       version:          Locomotive::Wagon::VERSION
     })
