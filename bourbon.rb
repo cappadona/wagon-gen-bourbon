@@ -1,6 +1,6 @@
 class Bourbon < Locomotive::Wagon::Generators::Site::Base
   def self.source_root
-    File.join(File.dirname(__FILE__), 'bourbon')
+    File.join(File.dirname(__FILE__))
   end
 end
 
